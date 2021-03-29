@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components'
 
 import TopBar from './components/TopBar'
+import TopContent from './components/TopContent'
 import './App.css';
 
 const Main = styled.main`
@@ -25,6 +26,7 @@ function App() {
     <Main>
       <Header>
         <TopBar />
+        <TopContent />
       </Header>
     </Main>
   );

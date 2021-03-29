@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const TopBar = styled.div`
   padding: 25px 120px;
@@ -21,10 +21,12 @@ const Navigation = styled.nav`
   gap: 16px;
 `
 const NavigationItem = styled.a`
-
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 32px;
 `
 
-function NavigationView() {
+function TopBarView() {
   return(
     <TopBar>
       <Logo>
@@ -45,4 +47,4 @@ function NavigationView() {
   );
 }  
 
-export default NavigationView
+export default TopBarView
