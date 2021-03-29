@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import MobileImageSVG from '../../../public/images/mobile_img.svg'
+
+import MobileImageSVG from '~/images/mobile_img.svg'
 
 const TopContent = styled.div`
   padding: 25px 0px;
@@ -56,6 +57,7 @@ const SubscribeButton = styled.button`
   padding: 16px;
   color: #FFFFFF;
   border: unset;
+  cursor: pointer;
 `
 const ContentRight = styled.div`
   margin-right: -100px;

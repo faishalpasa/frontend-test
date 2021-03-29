@@ -8,14 +8,13 @@ const USPCard = styled.div`
   border-radius: 20px;
   display: flex;
   max-width: 1200px;
-  margin: -120px auto auto;
-  padding: 60px 50px;
-  gap: 100px;
+  margin: -120px auto 200px;
 `
 const USPItem = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 50px;
 `
 const ImageSection = styled.div`
   padding: 32px;

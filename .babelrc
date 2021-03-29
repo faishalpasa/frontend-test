@@ -18,5 +18,17 @@
     ],
     "@babel/preset-react"
   ],
-  "plugins": [ "@babel/plugin-proposal-class-properties" ]
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    ["styled-components", { "ssr": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
+  ]
 }

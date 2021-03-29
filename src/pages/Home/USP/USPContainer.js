@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import BenefitImage1 from '../../../public/images/benefit-1.svg'
-import BenefitImage2 from '../../../public/images/benefit-2.svg'
-import BenefitImage3 from '../../../public/images/benefit-3.svg'
+import BenefitImage1 from '~/images/benefit-1.svg'
+import BenefitImage2 from '~/images/benefit-2.svg'
+import BenefitImage3 from '~/images/benefit-3.svg'
 
 import USPView from './USPView'
 
