@@ -1,10 +1,10 @@
-const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
-const path = require( 'path' );
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const path = require('path')
 module.exports = {
   context: __dirname,
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: path.resolve( __dirname, 'dist' ),
+    path: path.resolve( __dirname, 'dist'),
     filename: 'main.js',
     publicPath: '',
   },
@@ -15,6 +15,10 @@ module.exports = {
     rules: [
     {
       test: /\.js$/,
+      use: 'babel-loader',
+    },
+    {
+      test: /\.jsx$/,
       use: 'babel-loader',
     },
     {
@@ -29,8 +33,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.resolve( __dirname, 'public/index.html' ),
-      filename: 'index.html'
+      template: path.resolve( __dirname, 'public/index.html'),
+      filename: 'index.html',
+      inject: false
     })
   ]
-};
+}

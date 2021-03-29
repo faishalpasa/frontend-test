@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import MobileImageSVG from '../../../public/images/mobile_img.svg'
 
 const TopContent = styled.div`
-  padding: 25px 120px;
+  padding: 25px 0px;
   padding-bottom: 270px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
 `
 const ContentLeft = styled.div`
   display: flex;
