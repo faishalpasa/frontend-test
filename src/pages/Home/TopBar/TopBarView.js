@@ -27,6 +27,7 @@ const NavigationItem = styled.a`
   font-size: 17px;
   line-height: 32px;
   text-decoration: none;
+  color: #ffffff;
   cursor: pointer;
   :visited {
     color: inherit;
