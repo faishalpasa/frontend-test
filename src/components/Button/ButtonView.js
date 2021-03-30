@@ -29,9 +29,9 @@ ButtonView.defaultProps = {
 
 ButtonView.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object
-  ])
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
 }
 
 export default ButtonView

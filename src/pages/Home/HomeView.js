@@ -6,6 +6,7 @@ import TopBar from './TopBar'
 import TopContent from './TopContent'
 import USP from './USP'
 import MiddleSection from './MiddleSection'
+import TestimonialSection from './TestimonialSection'
 import BottomSection from './BottomSection'
 import Footer from './Footer'
 
@@ -31,6 +32,7 @@ function HomeView({
       </Header>
       <USP benefits={benefits} benefitImages={benefitImages} isLoading={isLoading} />
       <MiddleSection />
+      <TestimonialSection testimonials={testimonials} />
       <BottomSection launchDayRemaining={launchDayRemaining} />
       <Footer />
     </Main>

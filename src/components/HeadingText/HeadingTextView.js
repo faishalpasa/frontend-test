@@ -106,8 +106,8 @@ HeadingTextView.defaultProps = {
 
 HeadingTextView.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
   ]),
   color: PropTypes.string,
   fontSize: PropTypes.oneOfType([
