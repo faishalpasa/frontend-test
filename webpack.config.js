@@ -15,11 +15,11 @@ module.exports = {
     rules: [
     {
       test: /\.js$/,
-      use: 'babel-loader',
+      use: ['babel-loader'],
     },
     {
       test: /\.jsx$/,
-      use: 'babel-loader',
+      use: ['babel-loader'],
     },
     {
       test: /\.css$/,

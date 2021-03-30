@@ -1,5 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import Button from '~/components/Button'
+import HeadingText from '~/components/HeadingText'
+import Text from '~/components/Text'
 import OrangeTreeImage from '~/images/orange_tree.png'
 
 const MiddleSection = styled.section`
@@ -34,43 +38,15 @@ const ContentRight = styled.div`
   flex-direction: column;
   align-items: flex-end;
 `
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 60px;
-  text-align: right;
-  color: #F8765E;
-  margin-top: 0px;
-  margin-bottom: 16px;
+const StyledH1 = styled(HeadingText)`
+  margin-bottom: 16px !important;
 `
-const Description = styled.p`
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 45px;
-  text-align: right;
-  color: #031D5B;
-  margin-top: 0px;
-  margin-bottom: 40px;
+const StyledH2 = styled(HeadingText)`
+  margin-bottom: 40px !important;
 `
-const LongDescription = styled.p`
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 32px;
+const StyledText = styled(Text)`
   text-align: right;
-  color: #5B6C94;
-  margin-top: 0px;
-  margin-bottom: 40px;
-`
-const SubscribeButton = styled.button`
-  background: #9BDBE7;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 25px;
-  padding: 16px;
-  color: #FFFFFF;
-  border: unset;
-  cursor: pointer;
+  margin-bottom: 40px !important;
 `
 
 function MiddleSectionView() {
@@ -82,13 +58,13 @@ function MiddleSectionView() {
         </Round>
       </ContentLeft>
       <ContentRight>
-        <Title>
+        <StyledH1 type="h1" fontWeight="bold" fontSize={48} lineHeight={60} color="#F8765E">
           It tastes like Premium.
-        </Title>
-        <Description>
+        </StyledH1>
+        <StyledH2 type="h2" fontWeight="bold" fontSize={34} lineHeight={45} color="#031D5B">
           Better than an apple.
-        </Description>
-        <LongDescription>
+        </StyledH2>
+        <StyledText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
@@ -96,10 +72,8 @@ function MiddleSectionView() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
           officia deserunt mollit anim id est laborum.
-        </LongDescription>
-        <SubscribeButton>
-          Subscribe Now
-        </SubscribeButton>
+        </StyledText>
+        <Button>Subscribe Now</Button>
       </ContentRight>
     </MiddleSection>
   );

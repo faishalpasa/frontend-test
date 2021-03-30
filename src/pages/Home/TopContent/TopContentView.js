@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Button from '~/components/Button'
 import MobileImageSVG from '~/images/mobile_img.svg'
 
 const TopContent = styled.div`
@@ -48,17 +49,6 @@ const EmailField = styled.input`
     color: #CDCDCD;
   }
 `
-const SubscribeButton = styled.button`
-  background: #9BDBE7;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 25px;
-  padding: 16px;
-  color: #FFFFFF;
-  border: unset;
-  cursor: pointer;
-`
 const ContentRight = styled.div`
   margin-right: -100px;
 `
@@ -83,7 +73,7 @@ function TopContentView() {
         </Intro>
         <SubscribeNow>
           <EmailField placeholder="Your email address" />
-          <SubscribeButton>Subscribe Now</SubscribeButton>
+          <Button>Subscribe Now</Button>
         </SubscribeNow>
       </ContentLeft>
       <ContentRight>
