@@ -1,14 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { breakpoint } from '~/constants/breakpoints'
+
 const TopBar = styled.div`
-  padding: 25px 0px;
+  padding: 25px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
   max-width: 1200px;
   margin: auto;
+
+  @media ${breakpoint.laptop} {
+    padding: 25px 40px;
+  }
+
+  @media ${breakpoint.tablet} {
+    flex-direction: column;
+  }
 `
 const Logo = styled.p`
   font-weight: 900;
@@ -20,7 +30,7 @@ const Navigation = styled.nav`
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 16px;
+  gap: 32px;
 `
 const NavigationItem = styled.a`
   font-weight: 900;

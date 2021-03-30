@@ -2,13 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import { breakpoint } from '~/constants/breakpoints'
+
+const Section = styled.section`
+  padding: 40px;
+  margin-top: -120px;
+  margin-bottom:  200px;
+  @media ${breakpoint.tablet} {
+    margin-bottom:  100px;
+  }
+
+  @media ${breakpoint.mobileL} {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+`
+
 const USPCard = styled.div`
   background: #FFFFFF;
   box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   display: flex;
   max-width: 1200px;
-  margin: -120px auto 200px;
+  margin: auto;
+  @media ${breakpoint.tablet} {
+    flex-direction: column;
+  }
 `
 const USPItem = styled.div`
   display: flex;
@@ -21,6 +40,7 @@ const ImageSection = styled.div`
 `
 const Image = styled.img`
   height: 140px;
+  width: 100%;
 `
 const TitleSection = styled.div`
   padding: 16px 0px;
@@ -51,25 +71,27 @@ function USPView({
   isLoading,
 }) {
   return(
-    <USPCard id="benefit">
-      {!isLoading && benefits.map((benefit, index) => (
-        <USPItem key={index}>
-          <ImageSection>
-            <Image src={benefitImages[index]} alt={benefit.title} />
-          </ImageSection>
-          <TitleSection>
-            <Title>
-              {benefit.title}
-            </Title>
-          </TitleSection>
-          <DescSection>
-            <Desc>
-              {benefit.desc}
-            </Desc>
-          </DescSection>
-        </USPItem>
-      ))}
-    </USPCard>
+    <Section>
+      <USPCard id="benefit">
+        {!isLoading && benefits.map((benefit, index) => (
+          <USPItem key={index}>
+            <ImageSection>
+              <Image src={benefitImages[index]} alt={benefit.title} />
+            </ImageSection>
+            <TitleSection>
+              <Title>
+                {benefit.title}
+              </Title>
+            </TitleSection>
+            <DescSection>
+              <Desc>
+                {benefit.desc}
+              </Desc>
+            </DescSection>
+          </USPItem>
+        ))}
+      </USPCard>
+    </Section>
   )
 }  
 
