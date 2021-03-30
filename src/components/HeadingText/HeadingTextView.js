@@ -97,7 +97,7 @@ function HeadingTextView({
 
 HeadingTextView.defaultProps = {
   children: '',
-  color: '#5B6C94',
+  color: 'inherit',
   fontSize: 16,
   fontWeight: 500,
   lineHeight: 32,
@@ -122,7 +122,7 @@ HeadingTextView.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
-  type: PropTypes.oneOf['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+  type: PropTypes.string
 }
 
 export default HeadingTextView

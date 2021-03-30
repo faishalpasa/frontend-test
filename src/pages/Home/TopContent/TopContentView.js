@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from '~/components/Button'
+import HeadingText from '~/components/HeadingText'
+import Text from '~/components/Text'
+import InputField from '~/components/InputField'
 import MobileImageSVG from '~/images/mobile_img.svg'
 
 const TopContent = styled.div`
@@ -11,43 +14,24 @@ const TopContent = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  color: #ffffff;
   max-width: 1200px;
   margin: auto;
 `
 const ContentLeft = styled.div`
   display: flex;
   flex-direction: column;
+  color: #ffffff;
   max-width: 560px;
 `
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 60px;
+const StyledHeadingText = styled(HeadingText)`
   margin-bottom: 25px;
 `
-const Intro = styled.p`
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 32px;
+const StyledText = styled(Text)`
   margin-bottom: 42px;
 `
 const SubscribeNow = styled.div`
   display: flex;
   gap: 16px;
-`
-const EmailField = styled.input`
-  background: #FFFFFF;
-  box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 25px;
-  padding: 16px 24px;
-  border: unset;
-  ::placeholder {
-    color: #CDCDCD;
-  }
 `
 const ContentRight = styled.div`
   margin-right: -100px;
@@ -61,18 +45,18 @@ function TopContentView() {
   return(
     <TopContent>
       <ContentLeft>
-        <Title>
+        <StyledHeadingText fontSize={48} lineHeight={60}>
           Subscribe today and get 
           notified first when we 
           launch Orange app!
-        </Title>
-        <Intro>
+        </StyledHeadingText>
+        <StyledText fontSize={16} lineHeight={32}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi.
-        </Intro>
+        </StyledText>
         <SubscribeNow>
-          <EmailField placeholder="Your email address" />
+          <InputField placeholder="Your email address" />
           <Button>Subscribe Now</Button>
         </SubscribeNow>
       </ContentLeft>
@@ -80,7 +64,7 @@ function TopContentView() {
         <MobileImage src={MobileImageSVG} />
       </ContentRight>
     </TopContent>
-  );
+  )
 }  
 
 export default TopContentView

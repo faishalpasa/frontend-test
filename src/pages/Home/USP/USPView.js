@@ -70,7 +70,7 @@ function USPView({
         </USPItem>
       ))}
     </USPCard>
-  );
+  )
 }  
 
 USPView.propTypes = {

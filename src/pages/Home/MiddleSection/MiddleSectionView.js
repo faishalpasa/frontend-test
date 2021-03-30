@@ -76,7 +76,7 @@ function MiddleSectionView() {
         <Button>Subscribe Now</Button>
       </ContentRight>
     </MiddleSection>
-  );
+  )
 }  
 
 export default MiddleSectionView

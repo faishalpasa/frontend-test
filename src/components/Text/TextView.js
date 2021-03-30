@@ -31,7 +31,7 @@ function TextView({
 
 TextView.defaultProps = {
   children: '',
-  color: '#5B6C94',
+  color: 'inherit',
   fontSize: 16,
   fontWeight: 500,
   lineHeight: 32,

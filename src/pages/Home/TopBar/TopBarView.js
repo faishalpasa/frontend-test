@@ -57,7 +57,7 @@ function TopBarView() {
         </NavigationItem>
       </Navigation>
     </TopBar>
-  );
+  )
 }  
 
 export default TopBarView

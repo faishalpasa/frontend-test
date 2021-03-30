@@ -1,1 +1,1 @@
-export { default } from './USPContainer'
+export { default } from './USPView'
