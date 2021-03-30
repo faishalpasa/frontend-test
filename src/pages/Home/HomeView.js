@@ -12,6 +12,8 @@ import Footer from './Footer'
 
 const Main = styled.main`
   background-color: #FFFFFF;
+  max-width: 1440px;
+  margin: auto;
 `
 const Header = styled.header`
   background: #031D5B;
